@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\SequentialProblems\Question 6\Source.cpp(22,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\SequentialProblems\Question 6\Source.cpp(27,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Question 6.vcxproj -> C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\SequentialProblems\x64\Debug\Question 6.exe
