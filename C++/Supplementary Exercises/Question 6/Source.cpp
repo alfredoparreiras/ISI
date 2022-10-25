@@ -30,8 +30,13 @@ int main() {
 	//} while (liters != -1);
 
 	while (liters != -1) {
+
 		cout << "Enter the number of liters used ( -1 to terminate) " << endl;
 		cin >> liters;
+
+		if (liters == -1) {
+			break;
+		}
 
 		cout << "Enter the number of kilometers traveled: " << endl;
 		cin >> kilometersDriven;
@@ -40,9 +45,11 @@ int main() {
 
 		totalLiters = totalLiters + liters;
 		totalKilometersDriven = totalKilometersDriven + kilometersDriven;
+
+
 	}
 
 
-	cout << totalLiters << endl << totalKilometersDriven;
+	cout << "The total rate of gas consumption in litres per 100 kilometers is  " <<(totalLiters / totalKilometersDriven) * 100 <<".";
 
 }
