@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Conditionals Exercises\Question 31\Source.cpp(28,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Conditionals Exercises\Question 31\Source.cpp(29,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Conditionals Exercises\Question 31\Source.cpp(30,28): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Conditionals Exercises\Question 31\Source.cpp(31,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Question 31.vcxproj -> C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Conditionals Exercises\x64\Debug\Question 31.exe

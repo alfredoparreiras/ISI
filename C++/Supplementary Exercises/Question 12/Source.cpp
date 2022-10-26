@@ -21,9 +21,11 @@ int main() {
 	secondDigit = fourDigitsNumber / 100 % 10;
 	firstDigit = fourDigitsNumber / 1000 % 10;
 
-	encryptedMessage = ((thirdDigit + 7) % 10) + ((fourthDigit + 7) % 10) + ((firstDigit + 7) % 10) + ((secondDigit + 7) % 10);
+	cout << ((thirdDigit + 7) % 10) << endl << ((fourthDigit + 7) % 10) << endl << ((firstDigit + 7) % 10) << endl << ((secondDigit + 7) % 10);
 
-	cout << encryptedMessage;
+
+	
+	
 
 	
 
