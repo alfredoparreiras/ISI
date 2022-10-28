@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std; 
 
-	int add_numbers(int a, int b) {
-		
-		if (a < 0 || b < 0) {
-		return 0;
-		}
-		else {
-		return a + b;
-		}
+void say_world() {
+	cout << "World" << endl;
 }
 
-	int main() {
-		
-	}
+void sayHello() {
+	cout << "Hello" << endl;
+	say_world();
+	return;
+}
+
+int main() {
+	
+	sayHello();
+	return 0;
+}

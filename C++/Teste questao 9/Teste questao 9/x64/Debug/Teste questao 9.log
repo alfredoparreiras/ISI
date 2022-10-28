@@ -1,3 +1,4 @@
 ﻿  Source.cpp
-C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Teste questao 9\Teste questao 9\Source.cpp(30,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Teste questao 9.vcxproj -> C:\Users\aalfr\OneDrive\Documentos\Code\repos\C++\Teste questao 9\x64\Debug\Teste questao 9.exe
+C:\Users\aalfr\source\repos\C++\Teste questao 9\Teste questao 9\Source.cpp(30,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  LINK : C:\Users\aalfr\source\repos\C++\Teste questao 9\x64\Debug\Teste questao 9.exe not found or not built by the last incremental link; performing full link
+  Teste questao 9.vcxproj -> C:\Users\aalfr\source\repos\C++\Teste questao 9\x64\Debug\Teste questao 9.exe
