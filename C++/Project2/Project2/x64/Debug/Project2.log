@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\aalfr\source\repos\C++\Project2\Project2\Source.cpp(40,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\aalfr\source\repos\C++\Project2\Project2\Source.cpp(43,14): error C2371: 'accountNumber': redefinition; different basic types
+C:\Users\aalfr\source\repos\C++\Project2\Project2\Source.cpp(42): message : see declaration of 'accountNumber'
+C:\Users\aalfr\source\repos\C++\Project2\Project2\Source.cpp(46,23): error C2039: 'givenName': is not a member of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xstring(5186): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'

@@ -1,0 +1,4 @@
+﻿  Cinema.cpp
+C:\Users\aalfr\source\repos\C++\Cinema\Cinema\Cinema.cpp(54,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\aalfr\source\repos\C++\Cinema\Cinema\Cinema.cpp(55,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Cinema.vcxproj -> C:\Users\aalfr\source\repos\C++\Cinema\x64\Debug\Cinema.exe

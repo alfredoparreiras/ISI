@@ -1,0 +1,5 @@
+﻿  chance.cpp
+C:\Users\aalfr\source\repos\C++\Chance\Chance\chance.cpp(26,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\aalfr\source\repos\C++\Chance\Chance\chance.cpp(37,53): error C2660: 'determineIfWasFound': function does not take 2 arguments
+C:\Users\aalfr\source\repos\C++\Chance\Chance\chance.cpp(18,6): message : see declaration of 'determineIfWasFound'
+C:\Users\aalfr\source\repos\C++\Chance\Chance\chance.cpp(43,1): error C2059: syntax error: '}'
