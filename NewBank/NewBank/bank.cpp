@@ -30,7 +30,7 @@ Functions :
 */
 
 
-// STRUCT USED TO CREATE ACCOUNTDATA
+// STRUCT USED TO CREATE ACCOUNTDATA TYPE
 
 struct AccountData {
 	string givenName;
@@ -47,7 +47,8 @@ AccountData accounts[sizeofarray];
 // GLOBAL VARIABLES
 short menuOption;
 double amount;
-short accountNumbers{ 0 };
+short quantityOfAccounts{ 0 };
+int accountNumber{ 0 };
 
 
 // FUNCTIONS PROTOTYPES
@@ -58,7 +59,7 @@ int subMenu();
 void displayAll() {
 	cout << "   Account Number   " << "    Given Name    " << "    Family Name   " << "    Balance     " << endl;
 	for (int i{ 0 }; i < sizeofarray; i++) {
-		cout << "    " << accounts[i].accountNumber << "    " << accounts[i].givenName << "    " << accounts[i].familyName << "    " << accounts[i].balance << endl;
+		cout << "      " << accounts[i].accountNumber << "        " << accounts[i].givenName << "" << accounts[i].familyName << "        " << accounts[i].balance << endl;
 	}
 }
 void deposit(double);
@@ -85,8 +86,8 @@ int main() {
 
 		case 3: 
 				cout << "Please, insert the account's number to search the data: ";
-				cin >> index;
-				displayData(index);
+				cin >> accountNumber;
+				displayData(accountNumber);
 				break;
 		case 4: 
 				cout << "Please insert your index number : " << " ";
@@ -145,9 +146,9 @@ AccountData addAccount() {
 
 	cout << "Account Created. Press any key to returning to the menu." << endl;
 
-	accountNumbers++;
+	quantityOfAccounts++;
 
-	cout << "At this moment you have " << accountNumbers << "Accounts.";
+	cout << "At this moment you have " << quantityOfAccounts << "Accounts.";
 
 	return c;
 }
@@ -155,16 +156,19 @@ AccountData addAccount() {
 
 // FUNCTION TO DISPLAY ALL ACCOUNT INFORMATION 
 // TODO : Change for the clients number account and dont use the index
-void displayData(int index) {
+void displayData(int accountNumber) {
 
-	if (accounts[index].balance > 0) {
+	for (int i{ 0 }; i < quantityOfAccounts; i++) {
+		if (accounts[i].accountNumber == accountNumber) {
+			if (accounts[i].balance > 0) {
 
-		cout << "Hello " << accounts[index].givenName << " " << accounts[index].familyName << ", your account number is " << accounts[index].accountNumber << ". At this moment your balance is $" << accounts[index].balance << " dollars in your account." << endl;
+				cout << "Hello " << accounts[index].givenName << " " << accounts[index].familyName << ", your account number is " << accounts[index].accountNumber << ". At this moment your balance is $" << accounts[index].balance << " dollars in your account." << endl;
+			}
+			else {
+				cout << "Hello " << accounts[index].givenName << " " << accounts[index].familyName << ", your account number is " << accounts[index].accountNumber << ". At this moment your balance is negative in $" << accounts[index].balance << " dollars, please make a deposit to avoid administrative taxes." << endl;
+			}
+		}
 	}
-	else {
-		cout << "Hello " << accounts[index].givenName << " " << accounts[index].familyName << ", your account number is " << accounts[index].accountNumber << ". At this moment your balance is negative in $" << accounts[index].balance << " dollars, please make a deposit to avoid administrative taxes." << endl;
-	}
-
 
 }
 
@@ -219,12 +223,15 @@ int subMenu() {
 	return menuOption;
 }
 // FUNCTION TO CREATE THE DEPOSIT 
-void deposit(double amount) {
-
-	accounts[index].balance = accounts[index].balance + amount;
-	cout << "Your new balance is $" << accounts[index].balance << " Dollars." << endl;
-
-}
+//void deposit(double amount) {
+//	for (int i{ 0 }; i < quantityOfAccounts; i++) {
+//		if (accounts[i].accountNumber == accountNumber) {
+//
+//			accounts[index].balance = accounts[index].balance + amount;
+//			cout << "Your new balance is $" << accounts[index].balance << " Dollars." << endl;
+//			
+//		}
+//	};
 
 // FUNCTION TO CREATE THE WITHDRAW
 void withdrawal(double amount) {
@@ -246,7 +253,7 @@ double averageOfBalances() {
 		totalBalanceOfAccounts = totalBalanceOfAccounts + accounts[i].balance;
 	}
 
-	averageBalance = totalBalanceOfAccounts / accountNumbers;
+	averageBalance = totalBalanceOfAccounts / quantityOfAccounts;
 
 	return averageBalance;
 

@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\aalfr\source\repos\bank\bank\Source.cpp(291,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aalfr\source\repos\bank\bank\Source.cpp(304,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  bank.vcxproj -> C:\Users\aalfr\source\repos\bank\x64\Debug\bank.exe

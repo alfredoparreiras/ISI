@@ -1,0 +1,3 @@
+﻿  SynthesisQ47.cpp
+C:\Users\aalfr\source\repos\C++\Synthesis\SynthesisQ47\SynthesisQ47.cpp(98,77): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SynthesisQ47.vcxproj -> C:\Users\aalfr\source\repos\C++\Synthesis\x64\Debug\SynthesisQ47.exe

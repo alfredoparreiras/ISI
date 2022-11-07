@@ -1,4 +1,4 @@
 ﻿  bank.cpp
-C:\Users\aalfr\source\repos\NewBank\NewBank\bank.cpp(224,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\aalfr\source\repos\NewBank\NewBank\bank.cpp(233,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  NewBank.vcxproj -> C:\Users\aalfr\source\repos\NewBank\x64\Debug\NewBank.exe
+C:\Users\aalfr\source\repos\NewBank\NewBank\bank.cpp(240,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+bank.obj : error LNK2019: unresolved external symbol "void __cdecl deposit(double)" (?deposit@@YAXN@Z) referenced in function main
+C:\Users\aalfr\source\repos\NewBank\x64\Debug\NewBank.exe : fatal error LNK1120: 1 unresolved externals
