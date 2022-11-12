@@ -1,0 +1,3 @@
+﻿  ArraysIII.cpp
+C:\Users\aalfr\source\repos\ArraysIII\ArraysIII\ArraysIII.cpp(42,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ArraysIII.vcxproj -> C:\Users\aalfr\source\repos\ArraysIII\x64\Debug\ArraysIII.exe

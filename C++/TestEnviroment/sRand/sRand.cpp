@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<ctime>
+#include<string>
 #include<iomanip> // shortcut for ion manipulate
 
 using namespace std; 
@@ -26,10 +27,10 @@ int main() {
 	/*cout << fixed << setprecision(2) << 12.46389;*/
 
 
-	/*cout << left << setw(15) << "Course" << setw(10) << "Students" << endl <<
-			setw(15) <<"C++" << setw(10)<< right << 100 << left << endl <<
-			setw(15) << "JavaScript" << setw(10) << right << 50 <<  endl;
-*/
+	//cout << left << setw(15) << "Course" << setw(10) << "Students" << endl <<
+	//		setw(15) <<"C++" << setw(10)<< right << 100 << left << endl <<
+	//		setw(15) << "JavaScript" << setw(10) << right << 50 <<  endl;
+
 
 	//DISCOVERING MAX AND MIN VALUE OF VARIABLES
 
@@ -42,9 +43,32 @@ int main() {
 
 	//STRINGS AND CHARACTERS
 
-	cout << "Enter your full address : ";
-	string address;
-	getline(cin, address);
+//	cout << "Enter your full address : ";
+//	string address;
+//	getline(cin, address);
+//	return 0;
+//
+
+	//string array[3] = { };
+
+	//cout << "Enter the First Name : "; 
+	//getline(cin, array[0]);
+
+	//cout << "Enter the First Name : ";
+	//getline(cin, array[1]);
+
+	//cout << "Enter the First Name : ";
+	//getline(cin,array[2]);
+
+	//cout << "My First name is : " << array[0];
+
+	int x{ 1 };
+	double y{ 2.2 };
+	int z = x + static_cast<int>(y); // The compiler will automatically convert int to double. This is fine bc doubles are more precise than integer. The inverse process will result in data loss. 
+	// We have two ways to convert data type in c++, the first one is called C Style. int z = x + (int)y; The second one is called c++ casting. We use static_cast<int>
+	cout << z; 
+	
+	
 	return 0;
 
 }

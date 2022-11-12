@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(16,5): error C2084: function 'int main(void)' already has a body
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(8): message : see previous definition of 'main'
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(56,2): error C4996: 'strrev': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strrev. See online help for details.
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(70,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(120,20): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(120,15): warning C4309: '=': truncation of constant value
+C:\Users\aalfr\source\repos\CharacterString\CharacterString\Source.cpp(153,75): warning C4305: 'initializing': truncation from 'double' to 'float'

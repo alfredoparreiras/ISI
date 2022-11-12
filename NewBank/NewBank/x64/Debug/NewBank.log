@@ -1,4 +1,3 @@
-﻿  bank.cpp
-C:\Users\aalfr\source\repos\NewBank\NewBank\bank.cpp(240,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1094,5): error MSB6006: "link.exe" exited with code 1120.
 bank.obj : error LNK2019: unresolved external symbol "void __cdecl deposit(double)" (?deposit@@YAXN@Z) referenced in function main
 C:\Users\aalfr\source\repos\NewBank\x64\Debug\NewBank.exe : fatal error LNK1120: 1 unresolved externals

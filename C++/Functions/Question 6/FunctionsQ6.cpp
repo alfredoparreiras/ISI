@@ -14,8 +14,7 @@ int main() {
 }
 
 int validateInput(int a) {
-	int minimumLimit{ 0 };
-	int maximumLimit{ 100 };
+
 
 	if (a > minimumLimit && a < maximumLimit) {
 		return a;

@@ -3,7 +3,7 @@ using namespace std;
 
 /*3)	A function that takes 2 integers a and b, and returns the larger of the 2 integers.*/
 
-void largerInteger(int a, int b) {
+int max(int a, int b) {
 	if (a > b) {
 		cout << "The integer A = " << a << " is larger than integer B = " << b << ".\n";
 	}
