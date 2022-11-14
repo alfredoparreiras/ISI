@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\aalfr\source\repos\netSalary\netSalary\Source.cpp(25,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aalfr\source\repos\netSalary\netSalary\Source.cpp(32,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\aalfr\source\repos\netSalary\netSalary\Source.cpp(35,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  netSalary.vcxproj -> C:\Users\aalfr\source\repos\netSalary\x64\Debug\netSalary.exe

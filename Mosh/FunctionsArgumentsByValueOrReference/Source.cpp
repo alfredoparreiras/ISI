@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-void greet(string &name) {
+void greet(const string &name) {
 	
 	cout << "Hello " << name; 
 	name = "Outro nome";
@@ -51,6 +51,21 @@ int main() {
 
 	Important ! Usually we dont need to use this kind of operation with small amount of data, like an integer. Usually it is used for larger amount of data, like strings. 
 
+	We need to be carefull in work with reference, bc if acidentally change this name inside my function, will modify this value  in all others instances of the program. Because of that,  one thing we can do to avoid this problem is use "const" , when we add this keyword to the argument, the compiler will not let us change this value. 
+
+	void greet(const string &name) {
+
+	cout << "Hello " << name;
+	name = "Outro nome"; // Will mark as error. 
+}
+
+	int main() {
+
+	string name{ "alfredo parreira silva da costa nascimento" };
+	greet(name);
+	cout << name;
+
+	}
 	*/
 
 }
