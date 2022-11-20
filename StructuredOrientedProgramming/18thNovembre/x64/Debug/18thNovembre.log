@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\aalfr\source\repos\StructuredOrientedProgramming\18thNovembre\Source.cpp(63,11): error C2040: 's3': 'Student *' differs in levels of indirection from 'Student'
+C:\Users\aalfr\source\repos\StructuredOrientedProgramming\18thNovembre\Source.cpp(67,10): error C2100: illegal indirection
+C:\Users\aalfr\source\repos\StructuredOrientedProgramming\18thNovembre\Source.cpp(67,7): error C2088: '<<': illegal for class

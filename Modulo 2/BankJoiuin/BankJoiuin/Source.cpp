@@ -31,6 +31,7 @@ Functions :
 */
 
 
+
 // STRUCT USED TO CREATE ACCOUNTDATA TYPE
 
 struct AccountData {
@@ -40,10 +41,27 @@ struct AccountData {
 	int accountNumber;
 };
 
+// FUNCTIONS PROTOTYPES
+AccountData addAccount();
+void deleteAccount(int);
+void displayData(int);
+int menu();
+int subMenu();
+void displayAll();
+void deposit(double, int);
+void withdrawal(double, int);
+double averageOfBalances();
+double totalBalance();
+void sortingFunction(int);
+double numberValidation();
+string stringValidation();
+
+
 // DECLARE AND INITIALIZING THE ARRAY WITH ACCOUNT NUMBERS
 const int sizeofarray = 5;
 int index{ 0 };
 AccountData accounts[sizeofarray];
+
 
 // GLOBAL VARIABLES
 short menuOption;
@@ -51,27 +69,6 @@ double amount;
 short quantityOfAccounts{ 0 };
 int accountNumber{ 0 };
 int sortingType{ 0 };
-
-
-
-// FUNCTIONS PROTOTYPES
-AccountData addAccount();
-void deleteAccount(int);
-void displayData(int);
-int menu();
-int subMenu();
-void displayAll() {
-	cout << "Account Number\t" << "\tGiven Name\t" << "\tFamily Name\t" << "\tBalance\t" << endl;
-	for (int i{ 0 }; i < sizeofarray; i++) {
-		cout << accounts[i].accountNumber << "\t\t" << accounts[i].givenName << "\t\t" << accounts[i].familyName << "\t" << accounts[i].balance << "\t" << endl;
-	}
-}
-void deposit(double, int);
-void withdrawal(double, int);
-double averageOfBalances();
-double totalBalance();
-void sortingFunction(int);
-
 
 // MAIN SCOPE
 int main() {
@@ -89,32 +86,34 @@ int main() {
 
 			//REMOVE ACCOUNT
 		case 2:
-			cout << "Delete Menu\t(WARNING!! This is an Irreversible Deletion)" << endl;
+			cout << "Delete Menu\t(WARNING!! This is an Irreversible Deletion) " << endl;
 			/*	cout << "Would you still like to Continue (Type y or n) " << endl;*/
-			cin >> accountNumber;
+			cout << "Please insert account number :  " << endl;
+
+			accountNumber = numberValidation();
 			deleteAccount(accountNumber);
 			break;
 
 			//DISPLAY DATA
 		case 3:
 			cout << "Please, insert the account's number to search the data: ";
-			cin >> accountNumber;
+			accountNumber = numberValidation();
 			displayData(accountNumber);
 			break;
 			//DEPOSIT
 		case 4:
 			cout << "Enter your account number: " << endl;
-			cin >> accountNumber;
+			accountNumber = numberValidation();
 			cout << "Enter the amount you want to deposit : ";
-			cin >> amount;
+			amount = numberValidation();
 			deposit(amount, accountNumber);
 			break;
 			//WITHDRAWAL
 		case 5:
 			cout << "Enter your account number: " << endl;
-			cin >> accountNumber;
+			accountNumber = numberValidation();
 			cout << "Enter how much money you want to withdraw: ";
-			cin >> amount;
+			amount = numberValidation();
 			withdrawal(amount, accountNumber);
 			break;
 			//SORTING
@@ -124,7 +123,7 @@ int main() {
 			cout << "(1) - Descending\n";
 			cout << "(2) - Balance\n";
 
-			cin >> sortingType;
+			sortingType = numberValidation();
 			sortingFunction(sortingType);
 			break;
 			//AVERAGE
@@ -152,34 +151,36 @@ AccountData addAccount() {
 
 	AccountData c;
 
+
 	cout << endl;
 	cout << "--- Adding a New Account ---" << endl << endl;
 
-	//LOOP TO VERIFY IF THE ACCOUNT NUMBER MATCH WITH THE PATTERN
+	/*LOOP TO VERIFY IF THE ACCOUNT NUMBER MATCH WITH THE PATTERN*/
 	do {
 
 		cout << "Enter your account number between 10000 and 10099 :" << " ";
-		cin >> c.accountNumber;
+		c.accountNumber = numberValidation();
+		for (int i{ 0 }; i < quantityOfAccounts; i++) {
+			if (accounts[i].accountNumber == c.accountNumber) {
+				cout << "This account number already was assigned to another cliente. Please choose another number.";
+			}
+		}
 
 	} while (c.accountNumber < 10000 || c.accountNumber > 10999);
 
-
+	
 	cout << "Enter your first name : " << " ";
-	cin >> c.givenName;
-
-
+	c.givenName = stringValidation();
 
 	cout << "Enter your family name : " << " ";
-	cin >> c.familyName;
+	c.familyName = stringValidation();
 
 	cout << "Enter the amount for your first deposit : " << " ";
-	cin >> c.balance;
-
-	cout << "Account Created. Press any key to returning to the menu." << endl;
+	c.balance = numberValidation();
 
 	quantityOfAccounts++;
 
-	cout << "At this moment you have " << quantityOfAccounts << "Accounts.";
+	cout << "Account Created." << "At this moment you have " << quantityOfAccounts << "Accounts." << endl << endl; 
 
 	return c;
 }
@@ -201,13 +202,26 @@ void deleteAccount(int accountNumber) {
 			accounts[i].familyName = " ";
 
 		}
+
+	}
+
+	for (int i{ 0 }; i < quantityOfAccounts; i++) {
+		for (int j{ 0 }; j < quantityOfAccounts; j++) {
+			if (accounts[i].balance > accounts[j].balance) {
+				AccountData temp;
+				temp = accounts[i];
+				accounts[i] = accounts[j];
+				accounts[j] = temp;
+			}
+		}
 	}
 
 	cout << "Your account was delete";
+
+
 }
 
 // FUNCTION TO DISPLAY ALL ACCOUNT INFORMATION 
-// TODO : Change for the clients number account and dont use the index
 void displayData(int accountNumber) {
 
 	//bool accountActive{ false };
@@ -233,6 +247,14 @@ void displayData(int accountNumber) {
 	}
 }
 
+
+//FUNCTION TO DISPLAY INFORMATION FOR ALL ACCOUNTS 
+void displayAll() {
+	cout << "Account Number\t" << "\tGiven Name\t" << "\tFamily Name\t" << "\tBalance\t" << endl;
+	for (int i{ 0 }; i < sizeofarray; i++) {
+		cout << accounts[i].accountNumber << " " << accounts[i].givenName << " " << accounts[i].familyName << "  " << accounts[i].balance << "  " << endl;
+	}
+}
 
 // FUNCTION TO CREATE THE MENU AND SUBMENU
 int menu() {
@@ -338,7 +360,7 @@ double totalBalance() {
 	return sum;
 }
 
-// CREATING A SORTING FUNCTION 
+// SORTING FUNCTION 
 void sortingFunction(int sortingType) {
 
 	AccountData temp;
@@ -409,3 +431,39 @@ void sortingFunction(int sortingType) {
 	}
 
 }
+
+//FUNCTION TO VALIDATE INPUTS FROM THE USER. 
+
+double numberValidation() {
+
+	double value;
+	cin >> value; 
+
+	while (cin.fail() || cin.peek() != '\n') {
+		cin.clear(); // change the fail state.
+		cin.ignore(512, '\n'); // clear the buffer
+		cout << "Warning !! You need to enter a valid data.";
+		cin >> value;
+	}
+
+	cin.ignore(512, '\n');
+
+	return value;
+
+}
+
+string stringValidation() {
+	string string;
+	getline(cin, string);
+
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(512, '\n');
+		cout << "You're typing a wrong data , please insert the correct value : " << endl;
+		getline(cin, string);
+	}
+	cin.ignore(512, '\n');
+
+	return string;
+}
+

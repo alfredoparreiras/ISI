@@ -17,20 +17,14 @@ int main() {
 		cout << "Enter an integer : ";
 		short integer{ 0 };
 		cin >> integer;
+			
+		while (integer <= maximum && integer <= minimum) {
+
+			cout << "Caution: the value entered must be between: " << minimum << " and " << maximum << endl;
+			cin >> integer;
+		}
+
+		cout << "The value " << integer << " is larger than " << minimum << " and smaller than " << maximum << endl;
 		
-		if (integer > maximum || integer < minimum) {
-			while (cin.fail() || cin.peek() != '\n') {
-
-				cin.clear();
-				cin.ignore(512, '\n');
-				cout << "Caution: the value entered must be between: " << minimum << " and " << maximum;
-				cin >> integer;
-			}
-		}
-		else {
-
-			cout << "The value " << integer << " is larger than " << minimum << " and smaller than " << maximum;
-		}
-
 		return 0;
 }
