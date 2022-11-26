@@ -10,7 +10,32 @@
 */
 
 int main() {
-	Container um(5);
-	um.fillsContainer();
-	cout << um.getCapacity();
+
+	// 5 Liters and 3 Liters
+	/*Container one("One", 5);
+	one.fillsContainer();
+	Container two("Two", 3);
+	one.transferContainer(two);
+	two.emptyContainer();
+	one.transferContainer(two);
+	cout << two.getCapacity() << endl;
+	cout << two.getVolume() << endl;*/
+	
+	// 10 Liters and 8 Liters
+
+	Container three("Three", 10);
+	three.fillsContainer();
+	cout << three.getCapacity() << endl;
+	cout << three.getVolume() << endl;
+	Container four("Four", 3);
+	three.transferContainer(four);
+	cout << three.getCapacity() << endl;
+	cout << three.getVolume() << endl;
+	cout << four.getCapacity() << endl;
+	cout << four.getVolume() << endl;
+
+
+
+
+
 }

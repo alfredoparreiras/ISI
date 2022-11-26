@@ -10,8 +10,8 @@ class Helicopter {
 	double fuelLevel;
 	double altitude;
 	bool engineRunning;
-	const short maximumAltitude{ 12000 };
-	const short fuelCapacity{ 100 };
+	const unsigned short maximumAltitude{ 5000 };
+	const unsigned short fuelCapacity{ 100 };
 
 
 public:
@@ -28,5 +28,5 @@ public:
 	bool stopEngine();
 	bool flyToAltitude(double altitude);
 	bool refuel(double amount);
-	void toString();
+	string toString();
 };

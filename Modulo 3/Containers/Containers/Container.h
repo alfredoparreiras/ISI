@@ -5,18 +5,18 @@ using namespace std;
 
 
 class Container {
+
+
+	string name;
 	double capacity;
 	double volume;
 
 public:
 
 	//Constructor
-	Container(double capacity) {
-		Container::capacity = capacity;
-	}
+	Container();
+	Container(string name, double capacity);
 
-	//Setters
-	void setCapacity(double aCapacity);
 
 	//Getters
 	double getCapacity();

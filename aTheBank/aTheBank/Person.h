@@ -1,13 +1,18 @@
 #pragma once
-
+#include<iostream>
+using namespace std;
 
 class Person {
-	string name;
 
+public:
 	//Methods
-	Person(string name) {
-		Person::name = name;
-	};
+	string display();
 
-	void display() {}
+
+	//Constructors
+	Person();
+	Person(string name);
+
+private:
+	string name;
 };

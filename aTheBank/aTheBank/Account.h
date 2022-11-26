@@ -1,5 +1,8 @@
 #pragma once
 #include"Person.h"
+#include<iostream>
+using namespace std; 
+
 
 
 class Account {
@@ -8,29 +11,22 @@ class Account {
 	double balance;
 	double interestRate;
 
+public:
+	//Constructor
+	Account(double accountNumber, const Person& person, double balance, double interestRate);
 
-	//Methods
-	Account(double accountNumber, Person person, double balance, double interestRate) {
-		Account::accountNumber = accountNumber;
-		Account::person = person;
-		Account::balance = balance;
-		Account::interestRate = interestRate;
-	}
 
-	void display() {
-		cout << "\tYour Account information is : " << endl;
-		cout << "\tYour account number: " << accountNumber << endl;
-		cout << "\tYour account balance: " << balance << endl;
-		cout << "\tYour account interest rate: " << interestRate << endl;
-		cout << "\This account belong to : " << "person" << endl;
+	//Getters
 
-	}
+	double getInterestRate();
+	double getBalance();
+	double getAccountNumber();
+	Person getAccountHolder();
 
-	string set_name(string name) {}
+	//Displaying Info Account
+	void accountDisplay();
 
-	double set_interestRate(double interestRate) {}
-
-	double set_Deposit(double deposit) {}
-
-	double set_Withdraw(double withdrawal) {}
+	//Operations
+	bool deposit(double amount);
+	bool withdrawal(double withdrawal);
 };

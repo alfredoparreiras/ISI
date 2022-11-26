@@ -1,5 +1,8 @@
 #pragma once
 #include<vector>
+#include<iostream>
+#include"Account.h"
+using namespace std; 
 
 
 class Bank {
@@ -7,11 +10,9 @@ class Bank {
 	Person director;
 	vector<Account> accounts;
 
-	//Methods
-
-	Bank(string nameOfBank) {
-		Bank::nameOfTheBank = nameOfBank;
-	}
+public:
+	//Constructors
+	Bank(string nameOfBank);
 
 
 

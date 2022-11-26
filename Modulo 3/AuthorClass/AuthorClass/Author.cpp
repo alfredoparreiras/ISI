@@ -4,12 +4,7 @@
 
 
 //Constructos
-Author::Author(string name, unsigned short percentage) {
-
-	authorsName = name;
-	contribution = percentage;
-
-};
+Author::Author(string name, unsigned short percentage) : authorsName{ name }, contribution{ percentage } {};
 
 
 

@@ -1,28 +1,63 @@
 #include"Account.h"
-#include<iostream>
-using namespace std;
 
-void Account::display() {
+//Constructor 
+Account::Account(double accountNumber, const Person& person, double balance, double interestRate) {
+	Account::accountNumber = accountNumber;
+	Account::person = person;
+	Account::balance = balance;
+	Account::interestRate = interestRate;
+}
+
+//Getters
+
+double Account::getInterestRate() {
+	return interestRate;
+}
+
+double Account::getBalance() {
+	return balance;
+};
+
+double Account::getAccountNumber() {
+	return accountNumber;
+};
+
+Person Account::getAccountHolder() {
+	return person;
+
+};
+
+//Displaying Info Account
+
+void Account::accountDisplay() {
 	cout << "\tYour Account information is : " << endl;
 	cout << "\tYour account number: " << accountNumber << endl;
 	cout << "\tYour account balance: " << balance << endl;
 	cout << "\tYour account interest rate: " << interestRate << endl;
-	cout << "\This account belong to : " << "person" << endl;
+	cout << "\tThis account belong to : " << person.display() << endl;
 
 }
 
-string Account::set_name(string name) {
 
+
+
+
+bool Account::deposit(double amount) {
+	if (amount > 0) {
+		Account::balance += amount;
+		return true;
+	}
+	return false;
 }
 
-double Account::set_interestRate(double interestRate) {
-	Account::interestRate = interestRate;
-}
+bool Account::withdrawal(double withdrawal) {
+	if (balance > withdrawal) {
+		Account::balance -= withdrawal;
+		cout << "Your Operation was sucessfull. Your new balance is " << balance << endl;
+		return true;
+	}
 
-double Account::set_Deposit(double deposit) {
-	Account::balance += deposit;
-}
+	cout << "Operation declined. Your balance is smaller than the amount you have in balance ";
 
-double Account::set_Withdraw(double withdrawal) {
-	Account::balance += withdrawal;
+	return false;
 }
