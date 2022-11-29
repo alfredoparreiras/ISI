@@ -13,6 +13,7 @@ class Account {
 
 public:
 	//Constructor
+	Account() = default;
 	Account(double accountNumber, const Person& person, double balance, double interestRate);
 
 
@@ -26,7 +27,8 @@ public:
 	//Displaying Info Account
 	void accountDisplay();
 
-	//Operations
+	//Opera
+
 	bool deposit(double amount);
 	bool withdrawal(double withdrawal);
 };

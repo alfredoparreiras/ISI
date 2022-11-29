@@ -8,12 +8,21 @@ using namespace std;
 class Bank {
 	string nameOfTheBank;
 	Person director;
-	vector<Account> accounts;
+	Account account;
+	Account Accounts[5];
 
 public:
 	//Constructors
-	Bank(string nameOfBank);
+	Bank() = default;
+	explicit Bank(string nameOfBank);
 
+	//Methods
+	//Open Account
+	/*
+	Account openAccount(double accountNumber, const Person& person, double balance, double interestRate) : account(accountNumber, person, balance, interestRate);*/
+
+	
+	
 
 
 

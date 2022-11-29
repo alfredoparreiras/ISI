@@ -10,8 +10,8 @@ public:
 
 
 	//Constructors
-	Person();
-	Person(string name);
+	Person() = default;
+	explicit Person(string name);
 
 private:
 	string name;
