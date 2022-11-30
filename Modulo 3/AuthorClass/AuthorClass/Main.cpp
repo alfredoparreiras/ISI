@@ -14,10 +14,10 @@ int main() {
 	alfredo.display();
 	cout << endl;
 
-	Author rehman("Rehman", -40);
-	rehman.display();
-	rehman.setContribution(-60);
-	rehman.display();
+	Author rehman("Rehman", 40);
+
+
+	cout << rehman.getContribution();
 
 
 

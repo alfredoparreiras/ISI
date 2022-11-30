@@ -16,13 +16,16 @@ public:
 	Account() = default;
 	Account(double accountNumber, const Person& person, double balance, double interestRate);
 
+	//Open Account Method
+	
+	void openAccount()
 
 	//Getters
 
 	double getInterestRate();
 	double getBalance();
 	double getAccountNumber();
-	Person getAccountHolder();
+	string getAccountHolder();
 
 	//Displaying Info Account
 	void accountDisplay();

@@ -23,8 +23,8 @@ double Account::getAccountNumber() {
 	return accountNumber;
 };
 
-Person Account::getAccountHolder() {
-	return person;
+string Account::getAccountHolder() {
+	return Account::person.display();
 
 };
 

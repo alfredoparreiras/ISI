@@ -1,0 +1,7 @@
+﻿  Helicopter.cpp
+C:\Users\aalfr\source\repos\ISI\Modulo 3\Helicopter\Helicopter\Helicopter\Helicopter.cpp(92,21): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\aalfr\source\repos\ISI\Modulo 3\Helicopter\Helicopter\Helicopter\Helicopter.cpp(94,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  main.cpp
+  Menu.cpp
+  Generating Code...
+  Helicopter.vcxproj -> C:\Users\aalfr\source\repos\ISI\Modulo 3\Helicopter\Helicopter\x64\Debug\Helicopter.exe

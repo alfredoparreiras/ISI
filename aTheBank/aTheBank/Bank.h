@@ -6,10 +6,12 @@ using namespace std;
 
 
 class Bank {
+public:
 	string nameOfTheBank;
 	Person director;
 	Account account;
 	Account Accounts[5];
+	unsigned int numbersOfAccounts{ 0 };
 
 public:
 	//Constructors
@@ -18,12 +20,16 @@ public:
 
 	//Methods
 	//Open Account
-	/*
-	Account openAccount(double accountNumber, const Person& person, double balance, double interestRate) : account(accountNumber, person, balance, interestRate);*/
+	void openAccount(Account& account);
 
 	
 	
+	// Setters 
+	void setDirector(const Person& director);
 
+	// Getters
+	string getDirector();
 
-
+	//Display
+	void displayAccount(int index);
 };
